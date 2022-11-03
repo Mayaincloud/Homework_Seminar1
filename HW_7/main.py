@@ -1,7 +1,7 @@
 
-# import imp
-import menu
+
+import user_interface as ui
 import log
 
 log.logging.info('Start')
-menu.menu()
+ui.button_click()

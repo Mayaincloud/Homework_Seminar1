@@ -1,8 +1,12 @@
+import add
+import change
+import delete
+import read
 import search
 import exceptions
 import log
 
-def menu():
+def button_click():
     while True:
         print('1. Показать весь справочник')
         print('2. Поиск записи по имени/фамилии/номеру телефона')
@@ -15,7 +19,7 @@ def menu():
 
         if operation == 1:
             log.logging.info('Selected item number 1')
-            search.read()
+            read.read()
 
         elif operation == 2:
             log.logging.info('Selected item number 2')
@@ -24,17 +28,17 @@ def menu():
 
         elif operation == 3:
             log.logging.info('Selected item number 3')
-            my_add = search.add()
+            my_add = add.add()
             log.logging.info(f'User entered: {my_add}')
 
         elif operation == 4:
             log.logging.info('Selected item number 4')
-            my_change = search.change()
+            my_change = change.change()
             log.logging.info(f'User entered: {my_change}')
 
         elif operation == 5:
             log.logging.info('Selected item number 5')
-            my_delete = search.delete()
+            my_delete = delete.delete()
             log.logging.info(f'User entered: {my_delete}')
         
         elif operation == 6:
